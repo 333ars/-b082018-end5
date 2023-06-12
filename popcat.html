@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div{
+            width:100%;
+            height :900px
+        }
+        .cat-face{
+            background-image: url("img/face.jpeg");
+            background-repeat: no-repeat;
+        }
+        .cat-cry{
+            background-image: url("img/cry.jpeg");
+            background-repeat: no-repeat;
+        }
+    </style>
+
+</head>
+<body>
+
+ <div class="cat-face" id="cat"></div>
+ <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+ <script>
+  $(function(){
+
+      $("#cat").on("mouseup", function() {
+          $("#cat").removeClass("cat-cry");
+          $("#cat").addClass("cat-face");
+      })
+      $("#cat").on("mousedown", function() {
+          $("#cat").removeClass("cat-face");
+          $("#cat").addClass("cat-cry");
+      })
+  });
+
+
+ </script>
+</body>
+</html>
